@@ -38,21 +38,55 @@
                     <comment><![CDATA[Enable the «<a href='https://mage2.pro/c/extensions/blackbaud-netcommunity' target='_blank'>Blackbaud NetCommunity</a>» extension?]]></comment>
                 </field>
 				<field
-					id='privateKey'
+					id='bbncRootURL'
 					translate='label'
-					type='obscure'
+					type='text'
 					sortOrder='2'
 					showInDefault='1'
 					showInWebsite='1'
 					showInStore='1'
 				>
-					<label>Private Key</label>
-					<comment><![CDATA[<a href='https://mage2.pro/t/2309' target='_blank'>How to get it?</a>]]></comment>
-					<backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
-					<depends>
-						<field id='enable'>1</field>
-					</depends>
+					<label>Blackbaud NetCommunity Root URL</label>
+					<validate>required-entry</validate>
 				</field>
+				<field
+					id='privateKey'
+					translate='label'
+					type='obscure'
+					sortOrder='3'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+					<comment><![CDATA[<a href='https://mage2.pro/t/2309' target='_blank'>How to get it?</a>]]></comment>
+					<depends><field id='enable'>1</field></depends>
+					<label>Private Key</label>
+					<validate>required-entry</validate>
+				</field>
+				<group
+					id='button'
+					translate='label'
+					type='text'
+					sortOrder='4'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Button</label>
+					<field
+						id='label'
+						translate='label'
+						type='text'
+						sortOrder='1'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Label</label>
+						<validate>required-entry</validate>
+					</field>
+				</group>
 			</group>
         </section>
     </system>
