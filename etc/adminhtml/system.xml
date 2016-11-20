@@ -47,7 +47,11 @@
 					showInStore='1'
 				>
 					<label>Blackbaud NetCommunity Root URL</label>
-					<validate>required-entry</validate>
+<!--
+2016-11-20
+«validate-url» допускает пустое значение, поэтому «required-entry» нам тоже нужно.
+-->
+					<validate>required-entry validate-url</validate>
 				</field>
 				<field
 					id='privateKey'
