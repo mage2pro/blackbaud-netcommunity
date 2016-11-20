@@ -48,7 +48,7 @@
 				>
 					<label>Blackbaud NetCommunity Root URL</label>
 					<comment><![CDATA[It should be like «https://site.com» or «https://site.com/path».]]></comment>
-					<dfValidator>Dfe\BlackbaudNetCommunity\Validator\Url</dfValidator>
+					<dfValidator>Dfe\BlackbaudNetCommunity\Url</dfValidator>
 <!--
 2016-11-20
 «validate-url» допускает пустое значение, поэтому «required-entry» нам тоже нужно.

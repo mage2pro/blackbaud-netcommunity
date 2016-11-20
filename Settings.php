@@ -1,17 +1,24 @@
 <?php
 // 2016-11-19
 namespace Dfe\BlackbaudNetCommunity;
-use Magento\Framework\App\ScopeInterface as S;
-use Magento\Store\Model\Store;
-/** @method static Settings s() */
+/**
+ * 2016-11-19
+ * Аргумент $s для методов этого класса не нужен,
+ * потому что опции этого класса считывается только на витрине для текущего магазина.
+ * @method static Settings s()
+ */
 final class Settings extends \Df\Core\Settings {
 	/**
 	 * 2016-11-19
-	 * Параметр $s здесь не нужен,
-	 * потому что опция считывается только на витрине для текущего магазина.
 	 * @return string
 	 */
 	public function privateKey() {return $this->p();}
+
+	/**
+	 * 2016-11-20
+	 * @return string
+	 */
+	public function url() {return $this->v();}
 
 	/**
 	 * 2016-11-19
