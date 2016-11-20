@@ -58,10 +58,10 @@
 					showInWebsite='1'
 					showInStore='1'
 				>
+					<label>Private Key</label>
 					<backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
 					<comment><![CDATA[<a href='https://mage2.pro/t/2309' target='_blank'>How to get it?</a>]]></comment>
 					<depends><field id='enable'>1</field></depends>
-					<label>Private Key</label>
 					<validate>required-entry</validate>
 				</field>
 				<group
