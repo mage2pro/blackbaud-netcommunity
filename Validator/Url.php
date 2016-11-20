@@ -28,7 +28,9 @@ class Url implements \Df\Framework\IValidator {
 			try {
 				/** @var \Zend_Http_Response $r */
 				$r = $c->request();
-				if (!$r->isRedirect() || $location !== $r->getHeader('Location')) {
+				// 2016-11-20
+				// Blackbaud NetCommunity при перенаправлении добавляет в конце «/».
+				if (!$r->isRedirect() || $location !== df_trim_ds_right($r->getHeader('Location'))) {
 					$result = __(
 						"The verification is failed. The Blackbaud NetCommunity webserver should redirect"
 						." the «%1» request to «%2», but it does not.", $uri, $location

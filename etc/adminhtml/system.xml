@@ -47,12 +47,13 @@
 					showInStore='1'
 				>
 					<label>Blackbaud NetCommunity Root URL</label>
+					<comment><![CDATA[It should be like «https://site.com» or «https://site.com/path».]]></comment>
+					<dfValidator>Dfe\BlackbaudNetCommunity\Validator\Url</dfValidator>
 <!--
 2016-11-20
 «validate-url» допускает пустое значение, поэтому «required-entry» нам тоже нужно.
 -->
 					<validate>required-entry validate-url</validate>
-					<dfValidator>Dfe\BlackbaudNetCommunity\Validator\Url</dfValidator>
 				</field>
 				<field
 					id='privateKey'
