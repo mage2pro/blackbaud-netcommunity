@@ -27,7 +27,7 @@
                 <field
                     id='enable'
                     translate='label'
-                    type='Df\Framework\Form\Element\Enable'
+                    type='Df\Framework\Form\Element\Checkbox'
                     sortOrder='1'
 					showInDefault='1'
 					showInWebsite='1'
@@ -38,9 +38,9 @@
                     <comment><![CDATA[Enable the «<a href='https://mage2.pro/c/extensions/blackbaud-netcommunity' target='_blank'>Blackbaud NetCommunity</a>» extension?]]></comment>
                 </field>
 				<field
-					id='bbncRootURL'
+					id='url'
 					translate='label'
-					type='text'
+					type='Df\Framework\Form\Element\Text'
 					sortOrder='2'
 					showInDefault='1'
 					showInWebsite='1'
@@ -52,6 +52,7 @@
 «validate-url» допускает пустое значение, поэтому «required-entry» нам тоже нужно.
 -->
 					<validate>required-entry validate-url</validate>
+					<dfValidator>Dfe\BlackbaudNetCommunity\Validator\Url</dfValidator>
 				</field>
 				<field
 					id='privateKey'
