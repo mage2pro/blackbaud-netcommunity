@@ -10,5 +10,7 @@ class Index extends \Magento\Framework\App\Action\Action {
 	 * @see \Magento\Framework\App\Action\Action::execute()
 	 * @return Json
 	 */
-	public function execute() {return df_leh(function(){return Json::i(df_request());});}
+	public function execute() {return df_leh(function(){return Json::i(
+		df_my_local() && !df_request() ? df_test_file_lj($this, '45.json') : df_request()
+	);});}
 }
