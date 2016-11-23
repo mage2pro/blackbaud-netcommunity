@@ -2,14 +2,13 @@
 // 2016-11-20
 namespace Dfe\BlackbaudNetCommunity;
 use Dfe\BlackbaudNetCommunity\Settings\Button as SB;
-class Button extends \Magento\Framework\View\Element\AbstractBlock {
+class Button extends \Df\Sso\Button {
 	/**
-	 * 2016-11-20
+	 * 2016-11-23
 	 * @override
-	 * @see \Magento\Framework\View\Element\AbstractBlock::toHtml()
+	 * @see \Df\Sso\Button::loggedOut()
+	 * @used-by \Df\Sso\Button::_toHtml()
 	 * @return string
 	 */
-	public function toHtml() {return df_customer_logged_in() ? '' :
-		df_tag_a(SB::s()->label(), Url::get())
-	;}
+	protected function loggedOut() {return df_tag_a(SB::s()->label(), Url::get());}
 }
