@@ -5,11 +5,12 @@
 >
 	<body>
 		<referenceBlock name='header.links'>
-			<block
-				before='-'
-				class='Dfe\BlackbaudNetCommunity\Button'
-				ifconfig='df_sso/blackbaudNetCommunity/button/locations/header'
-			/>
+			<block before='-' class='Dfe\BlackbaudNetCommunity\Button'>
+				<arguments>
+					<argument name='dfConfigPrefix' xsi:type='string'
+					>df_sso/blackbaudNetCommunity/button/header</argument>
+				</arguments>
+			</block>
 		</referenceBlock>
 	</body>
 </page>
