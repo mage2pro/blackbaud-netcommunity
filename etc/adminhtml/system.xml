@@ -73,13 +73,14 @@
 				</field>
 				<group
 					id='button'
-					translate='label'
-					type='text'
 					sortOrder='4'
 					showInDefault='1'
 					showInWebsite='1'
 					showInStore='1'
+					translate='label'
+					type='text'
 				>
+					<comment><![CDATA[The authentication button (or link) setttings.]]></comment>
 					<depends><field id='enable'>1</field></depends>
 					<label>Button</label>
 					<group
@@ -103,7 +104,7 @@
 						>
 							<label>Enable?</label>
 							<backend_model>Df\Config\Backend\Checkbox</backend_model>
-							<comment><![CDATA[Shows the <b>Blackbaud NetCommunity login</b> button in the header of the frontend pages, near to the standard «<b>Sign In</b>» and «<b>Create an Account</b>» links.]]></comment>
+							<comment><![CDATA[Shows the authentication button (or link) in the header of the frontend pages, near to the standard «<b>Sign In</b>» and «<b>Create an Account</b>» links.]]></comment>
 						</field>
 						<field
 							id='label'
@@ -140,7 +141,7 @@
 						>
 							<label>Enable?</label>
 							<backend_model>Df\Config\Backend\Checkbox</backend_model>
-							<comment><![CDATA[Shows the <b>Blackbaud NetCommunity login</b> button on the «<b>Customer Login</b>» page, above the standard «<b>Registered Customers</b>» and «<b>New Customers</b>» blocks.]]></comment>
+							<comment><![CDATA[Shows the authentication button (or link) on the «<b>Customer Login</b>» page, above the standard «<b>Registered Customers</b>» and «<b>New Customers</b>» blocks.]]></comment>
 						</field>
 						<field
 							id='label'
@@ -177,7 +178,7 @@
 						>
 							<label>Enable?</label>
 							<backend_model>Df\Config\Backend\Checkbox</backend_model>
-							<comment><![CDATA[Shows the <b>Blackbaud NetCommunity login</b> button on the «<b>Create New Customer Account</b>» page, above the standard registration form.]]></comment>
+							<comment><![CDATA[Shows the authentication button (or link) on the «<b>Create New Customer Account</b>» page, above the standard registration form.]]></comment>
 						</field>
 						<field
 							id='label'
