@@ -7,9 +7,18 @@
         <df_sso>
             <blackbaudNetCommunity>
 				<button>
-					<header><label>Login with Blackbaud NetCommunity</label></header>
-					<loginPage><label>Login with Blackbaud NetCommunity</label></loginPage>
-					<registratonPage><label>Login with Blackbaud NetCommunity</label></registratonPage>
+					<header>
+						<label>Login with Blackbaud NetCommunity</label>
+						<type>U</type>
+					</header>
+					<loginPage>
+						<label>Login with Blackbaud NetCommunity</label>
+						<type>U</type>
+					</loginPage>
+					<registratonPage>
+						<label>Login with Blackbaud NetCommunity</label>
+						<type>U</type>
+					</registratonPage>
 				</button>
             </blackbaudNetCommunity>
         </df_sso>
