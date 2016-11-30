@@ -8,15 +8,15 @@
             <blackbaudNetCommunity>
 				<button>
 					<header>
-						<label>Login with Blackbaud NetCommunity</label>
+						<label>with Blackbaud NetCommunity</label>
 						<type>U</type>
 					</header>
 					<loginPage>
-						<label>Login with Blackbaud NetCommunity</label>
+						<label>with Blackbaud NetCommunity</label>
 						<type>U</type>
 					</loginPage>
 					<registratonPage>
-						<label>Login with Blackbaud NetCommunity</label>
+						<label>with Blackbaud NetCommunity</label>
 						<type>U</type>
 					</registratonPage>
 				</button>
