@@ -33,7 +33,8 @@ class Url implements \Df\Framework\IValidator {
 				// Blackbaud NetCommunity при перенаправлении добавляет в конце «/».
 				if (!$r->isRedirect() || $redirect !== df_trim_ds_right($r->getHeader('Location'))) {
 					$result = __(
-						"The verification is failed. The Blackbaud NetCommunity webserver should redirect"
+						"The verification is failed."
+						." The Blackbaud NetCommunity webserver should redirect"
 						." the «%1» request to «%2», but it does not.", $url, $redirect
 					);
 				}
@@ -50,7 +51,9 @@ class Url implements \Df\Framework\IValidator {
 	 * @used-by check()
 	 * @return string
 	 */
-	public static function get() {return self::build(S::s()->url(), df_url_frontend(df_route(__CLASS__)));}
+	public static function get() {return
+		self::build(S::s()->url(), df_url_frontend(df_route(__CLASS__)))
+	;}
 
 	/**
 	 * 2016-11-20
@@ -59,6 +62,10 @@ class Url implements \Df\Framework\IValidator {
 	 * @param string $root
 	 * @param string $redirect
 	 * @param bool $requireLogin [optional]
+	 * 2016-11-30
+	 * «If the user is not logged in and the optional require login parameter isn’t supplied,
+	 * then no query string information will be added to the redirect URL.»
+	 * https://www.blackbaud.com/files/support/guides/bbnc/ssore.pdf
 	 * @return string
 	 */
 	private static function build($root, $redirect, $requireLogin = true) {return

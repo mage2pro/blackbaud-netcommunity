@@ -11,6 +11,7 @@ use Dfe\BlackbaudNetCommunity\Settings as S;
 		"ts": "2016-12-01T03:34:05.8004519+11:00",
 		"sig": "6d910d4e7580cc56af3ec2c7e87412eb"
 	}
+ * https://www.blackbaud.com/files/support/guides/bbnc/ssore.pdf
  */
 class Index extends \Magento\Framework\App\Action\Action {
 	/**
@@ -21,11 +22,27 @@ class Index extends \Magento\Framework\App\Action\Action {
 	 */
 	public function execute() {
 		try {
-			/** @var int $userid */
+			/**
+			 * 2016-11-30
+			 * «The BBIS user ID of the current logged in user.»
+			 * @var int $userid
+			 */
 			$userid = intval($this->req('userid'));
-			/** @var string $sig */
+			/**
+			 * 2016-11-30
+			 * «This is a signature to verify the authenticity of the user id.
+			 * It is created by taking an MD5 hash of the userId, time stamp, and private key
+			 * appended together in that order.»
+			 * @var string $sig
+			 */
 			$sig = $this->req('sig');
-			/** @var string $ts */
+			/**
+			 * 2016-11-30
+			 * «Time stamp of when the redirect was created.
+			 * This is created using this string format:
+			 * http://msdn.microsoft.com/en-us/library/az4se3k1.aspx#Roundtrip»
+			 * @var string $ts
+			 */
 			$ts = $this->req('ts');
 			return Json::i([$userid, $sig, $ts]);
 		}
