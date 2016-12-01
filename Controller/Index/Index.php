@@ -1,7 +1,6 @@
 <?php
 // 2016-11-20
 namespace Dfe\BlackbaudNetCommunity\Controller\Index;
-use Df\Framework\Controller\Result\Json;
 use Dfe\BlackbaudNetCommunity\Settings as S;
 /**
  * 2016-11-30
@@ -18,7 +17,7 @@ class Index extends \Magento\Framework\App\Action\Action {
 	 * 2016-11-20
 	 * @override
 	 * @see \Magento\Framework\App\Action\Action::execute()
-	 * @return Json
+	 * @return \Magento\Framework\Controller\Result\Redirect
 	 */
 	public function execute() {
 		try {
@@ -44,13 +43,11 @@ class Index extends \Magento\Framework\App\Action\Action {
 			 * @var string $ts
 			 */
 			$ts = $this->req('ts');
-			/** @var string $url */
-			$url = base64_decode(df_request('url'));
-			return Json::i([$userid, $sig, $ts, $url]);
+			//return Json::i([$userid, $sig, $ts, $url]);
+			return $this->resultRedirectFactory->create()->setUrl(base64_decode(df_request('url')));
 		}
 		catch (\Exception $e) {
-			xdebug_break();
-			return null;
+			throw $e;
 		}
 	}
 
