@@ -44,7 +44,9 @@ class Index extends \Magento\Framework\App\Action\Action {
 			 * @var string $ts
 			 */
 			$ts = $this->req('ts');
-			return Json::i([$userid, $sig, $ts]);
+			/** @var string $url */
+			$url = base64_decode(df_request('url'));
+			return Json::i([$userid, $sig, $ts, $url]);
 		}
 		catch (\Exception $e) {
 			xdebug_break();
