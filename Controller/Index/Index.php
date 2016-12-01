@@ -1,7 +1,7 @@
 <?php
 // 2016-11-20
 namespace Dfe\BlackbaudNetCommunity\Controller\Index;
-use Dfe\BlackbaudNetCommunity\Settings as S;
+use Magento\Framework\App\Action\Action as _P;
 /**
  * 2016-11-30
  * Blackbaud NetCommunity returns 3 parameters:
@@ -12,11 +12,11 @@ use Dfe\BlackbaudNetCommunity\Settings as S;
 	}
  * https://www.blackbaud.com/files/support/guides/bbnc/ssore.pdf
  */
-class Index extends \Magento\Framework\App\Action\Action {
+class Index extends _P {
 	/**
 	 * 2016-11-20
 	 * @override
-	 * @see \Magento\Framework\App\Action\Action::execute()
+	 * @see _P::execute()
 	 * @return \Magento\Framework\Controller\Result\Redirect
 	 */
 	public function execute() {
@@ -43,12 +43,13 @@ class Index extends \Magento\Framework\App\Action\Action {
 			 * @var string $ts
 			 */
 			$ts = $this->req('ts');
-			//return Json::i([$userid, $sig, $ts, $url]);
-			return $this->resultRedirectFactory->create()->setUrl(base64_decode(df_request('url')));
 		}
 		catch (\Exception $e) {
-			throw $e;
+			df_message_error($e);
 		}
+		/** @var string $url */
+		$url = df_request('url');
+		return $this->resultRedirectFactory->create()->setUrl($url ? base64_decode($url) : df_url());
 	}
 
 	/**
@@ -56,7 +57,7 @@ class Index extends \Magento\Framework\App\Action\Action {
 	 * @param string $p [optional]
 	 * @return string
 	 */
-	function req($p) {
+	private function req($p) {
 		/** @var array(string => string|int) $a */
 		$a = dfc($this, function() {return
 			df_request() ?: (!df_my_local() ? [] : df_test_file_lj($this, 'empty'))
