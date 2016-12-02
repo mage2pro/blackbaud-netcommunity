@@ -1,6 +1,7 @@
 <?php
 // 2016-11-20
 namespace Dfe\BlackbaudNetCommunity;
+use Df\Sso\CustomerReturn;
 use Dfe\BlackbaudNetCommunity\Settings as S;
 use Magento\Framework\Data\Form\Element\AbstractElement as AE;
 use Magento\Framework\Phrase;
@@ -53,7 +54,12 @@ class Url implements \Df\Framework\IValidator {
 	 */
 	public static function get() {return
 		self::build(S::s()->url(), df_url_frontend(df_route(__CLASS__), [
-			'url' => base64_encode(df_current_url())
+			/**
+			 * 2016-12-02
+			 * Это значение будет обратно декодировано в методе
+			 * @see CustomerReturn::execute()
+			 */
+			CustomerReturn::REDIRECT_URL_KEY => base64_encode(df_current_url())
 		]))
 	;}
 
