@@ -20,6 +20,7 @@
 						<type>U</type>
 					</registratonPage>
 				</button>
+				<regCompletionMessage><![CDATA[You are successfully authenticated by <b>Blackbaud NetCommunity</b>, and now we need some more information to complete your registration in the store.]]></regCompletionMessage>
             </blackbaudNetCommunity>
         </df_sso>
     </default>

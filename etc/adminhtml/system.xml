@@ -71,9 +71,26 @@
 					<depends><field id='enable'>1</field></depends>
 					<validate>required-entry</validate>
 				</field>
+				<field
+					id='regCompletionMessage'
+					translate='label'
+					type='Df\Framework\Form\Element\Textarea'
+					dfRows='4'
+					sortOrder='4'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>A message for the Complete Registraction step</label>
+					<comment><![CDATA[
+This message is shown to a new customer on the Magento's «<b>Create New Customer Account</b>» screen
+when the customer is authenticated by your Blackbaud NetCommunity website
+and then is redirected back to your Magento store to complete his registraction in the store.]]></comment>
+					<depends><field id='enable'>1</field></depends>
+				</field>
 				<group
 					id='button'
-					sortOrder='4'
+					sortOrder='5'
 					showInDefault='1'
 					showInWebsite='1'
 					showInStore='1'
