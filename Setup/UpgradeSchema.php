@@ -1,4 +1,21 @@
 <?php
 // 2016-12-02
 namespace Dfe\BlackbaudNetCommunity\Setup;
-class UpgradeSchema extends InstallSchema {}
+class UpgradeSchema extends \Df\Sso\Upgrade\Schema {
+	/**
+	 * 2016-12-02
+	 * @override
+	 * @used-by \Df\Sso\Upgrade\Schema::_process()
+	 * @return string
+	 */
+	public static function fId() {return 'df_bbnc__id';}
+
+	/**
+	 * 2016-12-02
+	 * @override
+	 * @see \Df\Framework\Upgrade::initial()
+	 * @used-by \Df\Framework\Upgrade::isInitial()
+	 * @return string
+	 */
+	protected function initial() {return '0.8.5';}
+}
