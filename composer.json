@@ -1,7 +1,7 @@
 {
 	"name": "mage2pro/blackbaud-netcommunity"
 	,"version": "1.0.1"
-	,"description": "«Blackbaud NetCommunity» Magento 2 extension."
+	,"description": "The «Blackbaud NetCommunity» extension for Magento 2."
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro/c/extensions/blackbaud-netcommunity"
 	,"license": "proprietary"
