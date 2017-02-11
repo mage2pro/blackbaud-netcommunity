@@ -6,11 +6,11 @@ class Main extends \Df\Core\TestCase {
 	/**
 	 * 2016-11-19
 	 */
-	public function t00() {}
+	function t00() {}
 
 	/**
 	 * @test
 	 * 2016-11-19
 	 */
-	public function t01() {echo S::s()->privateKey();}
+	function t01() {echo S::s()->privateKey();}
 }

@@ -9,13 +9,13 @@ final class Settings extends \Df\Sso\Settings {
 	 * 2016-11-19
 	 * @return string
 	 */
-	public function privateKey() {return $this->p();}
+	function privateKey() {return $this->p();}
 
 	/**
 	 * 2016-11-20
 	 * @return string
 	 */
-	public function url() {return $this->v();}
+	function url() {return $this->v();}
 
 	/**
 	 * 2016-11-19

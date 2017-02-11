@@ -15,7 +15,7 @@ class Url implements \Df\Framework\IValidator {
 	 * @param AE $e
 	 * @return true|Phrase|Phrase[]
 	 */
-	public function check(AE $e) {
+	function check(AE $e) {
 		/** @var true|Phrase|Phrase[] $result */
 		$result = true;
 		/** @var string|null $root */

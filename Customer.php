@@ -11,7 +11,7 @@ class Customer extends \Df\Sso\Customer {
 	 * @used-by \Df\Sso\CustomerReturn::register()
 	 * @return int|null
 	 */
-	public function id() {return $this->p('userid');}
+	function id() {return $this->p('userid');}
 
 	/**
 	 * 2016-12-02
@@ -21,7 +21,7 @@ class Customer extends \Df\Sso\Customer {
 	 * @return void
 	 * @throws \Exception
 	 */
-	public function validate() {
+	function validate() {
 		df_assert_eq($this->p('sig'), strtolower(md5(implode([
 			$this->id(), $this->p('ts'), S::s()->privateKey()
 		]))));
