@@ -8,7 +8,7 @@ class UpgradeSchema extends \Df\Sso\Upgrade\Schema {
 	 * @used-by \Df\Sso\Upgrade\Schema::_process()
 	 * @return string
 	 */
-	public static function fId() {return 'df_bbnc__id';}
+	static function fId() {return 'df_bbnc__id';}
 
 	/**
 	 * 2016-12-02

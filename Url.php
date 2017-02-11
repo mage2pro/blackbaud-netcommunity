@@ -52,7 +52,7 @@ class Url implements \Df\Framework\IValidator {
 	 * @used-by check()
 	 * @return string
 	 */
-	public static function get() {return
+	static function get() {return
 		self::build(S::s()->url(), df_url_frontend(df_route(__CLASS__), [
 			/**
 			 * 2016-12-02
