@@ -1,7 +1,7 @@
 <?php
-// 2016-11-19
 namespace Dfe\BlackbaudNetCommunity\T;
-use Dfe\BlackbaudNetCommunity\Settings as S;
+// 2016-11-19
+/** @method \Dfe\BlackbaudNetCommunity\Settings s() */
 class Main extends \Df\Core\TestCase {
 	/**
 	 * 2016-11-19
@@ -12,5 +12,5 @@ class Main extends \Df\Core\TestCase {
 	 * @test
 	 * 2016-11-19
 	 */
-	function t01() {echo S::s()->privateKey();}
+	function t01() {echo $this->s()->privateKey();}
 }
