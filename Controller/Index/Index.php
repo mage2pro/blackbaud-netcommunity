@@ -11,5 +11,5 @@ class Index extends _P {
 	 * @used-by _P::mc()
 	 * @return bool
 	 */
-	protected function canRegister() {return false;}
+	final protected function canRegister() {return false;}
 }
