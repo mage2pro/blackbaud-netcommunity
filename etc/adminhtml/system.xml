@@ -22,8 +22,8 @@
 				showInStore='1'
 			>
 				<label>Blackbaud NetCommunity</label>
-				<dfExtension>Dfe\BlackbaudNetCommunity\Ext</dfExtension>
-				<frontend_model>Df\Config\Block\System\Config\Form\Fieldset\Ext</frontend_model>
+				<dfExtension>Dfe_BlackbaudNetCommunity</dfExtension>
+				<frontend_model>Df\Config\Fieldset</frontend_model>
 				<field
 					id='enable'
 					translate='label'
