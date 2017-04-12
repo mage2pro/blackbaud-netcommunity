@@ -52,16 +52,10 @@ class Url implements \Df\Framework\IValidator {
 	 * @used-by check()
 	 * @return string
 	 */
-	static function get() {return
-		self::build(S::s()->url(), df_url_frontend(df_route(__CLASS__), [
-			/**
-			 * 2016-12-02
-			 * Это значение будет обратно декодировано в методе
-			 * @see CustomerReturn::execute()
-			 */
-			CustomerReturn::REDIRECT_URL_KEY => base64_encode(df_current_url())
-		]))
-	;}
+	static function get() {return self::build(S::s()->url(), df_url_frontend(df_route(__CLASS__), [
+		/** 2016-12-02 Это значение будет обратно декодировано в методе @see CustomerReturn::execute() */
+		CustomerReturn::REDIRECT_URL_KEY => base64_encode(df_current_url())
+	]));}
 
 	/**
 	 * 2016-11-20
