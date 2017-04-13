@@ -20,21 +20,19 @@ class Customer extends \Df\Sso\Customer {
 	 * @used-by \Df\Sso\CustomerReturn::c()
 	 * @throws \Exception
 	 */
-	function validate() {
-		df_assert_eq($this->p('sig'), strtolower(md5(implode([
-			$this->id(), $this->p('ts'), S::s()->privateKey()
-		]))));
-	}
+	function validate() {df_assert_eq($this->p('sig'), strtolower(md5(implode([
+		$this->id(), $this->p('ts'), S::s()->privateKey()
+	]))));}
 
 	/**
 	 * 2016-12-02
 	 * Blackbaud NetCommunity returns 3 parameters:
-		{
-			"userid": "45",
-			"ts": "2016-12-01T03:34:05.8004519+11:00",
-			"sig": "6d910d4e7580cc56af3ec2c7e87412eb"
-		}
-	 * https://www.blackbaud.com/files/support/guides/bbnc/ssore.pdf
+	 *	{
+	 *		"userid": "45",
+	 *		"ts": "2016-12-01T03:34:05.8004519+11:00",
+	 *		"sig": "6d910d4e7580cc56af3ec2c7e87412eb"
+	 *	}
+	 * «Blackbaud NetCommunity 7.1 Single Sign-on Overview Guide» (2017-01-24) https://mage2.pro/t/3696
 	 * @param string $key
 	 * @return string
 	 */

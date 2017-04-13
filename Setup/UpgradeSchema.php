@@ -1,7 +1,7 @@
 <?php
 // 2016-12-02
 namespace Dfe\BlackbaudNetCommunity\Setup;
-class UpgradeSchema extends \Df\Sso\Upgrade\Schema {
+final class UpgradeSchema extends \Df\Sso\Upgrade\Schema {
 	/**
 	 * 2016-12-02
 	 * @override

@@ -1,6 +1,7 @@
 <?php
-// 2016-12-02
 namespace Dfe\BlackbaudNetCommunity\Setup;
+// 2016-12-02
+/** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class UpgradeData extends \Df\Sso\Upgrade\Data {
 	/**
 	 * 2016-12-02
@@ -9,7 +10,7 @@ class UpgradeData extends \Df\Sso\Upgrade\Data {
 	 * @used-by \Df\Sso\Upgrade\Data::attribute()
 	 * @return string
 	 */
-	protected function labelPrefix() {return 'Blackbaud NetCommunity';}
+	final protected function labelPrefix() {return 'Blackbaud NetCommunity';}
 
 	/**
 	 * 2016-12-02
@@ -18,5 +19,5 @@ class UpgradeData extends \Df\Sso\Upgrade\Data {
 	 * @used-by \Df\Framework\Upgrade::isInitial()
 	 * @return string
 	 */
-	protected function initial() {return '0.8.5';}
+	final protected function initial() {return '0.8.5';}
 }

@@ -19,8 +19,9 @@ class Url implements \Df\Framework\IValidator {
 		/** @var true|Phrase|Phrase[] $result */
 		$result = true;
 		/** @var string|null $root */
-		$root = df_trim_ds_right($e['value']);
-		if ($root) {
+		if ($root = df_trim_ds_right($e['value'])) {
+			// 2017-04-14
+			// Any working website can be used here for the validation.
 			/** @var string $redirect */
 			$redirect = 'https://mage2.pro';
 			/** @var string $url */
@@ -67,7 +68,7 @@ class Url implements \Df\Framework\IValidator {
 	 * 2016-11-30
 	 * «If the user is not logged in and the optional require login parameter isn’t supplied,
 	 * then no query string information will be added to the redirect URL.»
-	 * https://www.blackbaud.com/files/support/guides/bbnc/ssore.pdf
+	 * «Blackbaud NetCommunity 7.1 Single Sign-on Overview Guide» (2017-01-24) https://mage2.pro/t/3696
 	 * @return string
 	 */
 	private static function build($root, $redirect, $requireLogin = true) {return
