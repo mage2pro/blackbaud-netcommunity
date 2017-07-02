@@ -15,7 +15,6 @@
 			<group
 				id='blackbaudNetCommunity'
 				translate='label'
-				type='text'
 				sortOrder='212'
 				showInDefault='1'
 				showInWebsite='1'
@@ -95,7 +94,6 @@ and then is redirected back to your Magento store to complete his registraction 
 					showInWebsite='1'
 					showInStore='1'
 					translate='label'
-					type='text'
 				>
 					<comment><![CDATA[The authentication button (or link) setttings.]]></comment>
 					<depends><field id='enable'>1</field></depends>
@@ -103,7 +101,6 @@ and then is redirected back to your Magento store to complete his registraction 
 					<group
 						id='header'
 						translate='label'
-						type='text'
 						sortOrder='1'
 						showInDefault='1'
 						showInWebsite='1'
@@ -157,7 +154,6 @@ and then is redirected back to your Magento store to complete his registraction 
 					<group
 						id='loginPage'
 						translate='label'
-						type='text'
 						sortOrder='2'
 						showInDefault='1'
 						showInWebsite='1'
@@ -211,7 +207,6 @@ and then is redirected back to your Magento store to complete his registraction 
 					<group
 						id='registratonPage'
 						translate='label'
-						type='text'
 						sortOrder='3'
 						showInDefault='1'
 						showInWebsite='1'
