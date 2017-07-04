@@ -14,23 +14,19 @@
 -->
 			<group
 				id='blackbaudNetCommunity'
-				translate='label'
+				showInDefault='1' showInStore='1' showInWebsite='1'
 				sortOrder='212'
-				showInDefault='1'
-				showInWebsite='1'
-				showInStore='1'
+				translate='label'
 			>
 				<label>Blackbaud NetCommunity</label>
 				<dfExtension>Dfe_BlackbaudNetCommunity</dfExtension>
 				<frontend_model>Df\Config\Fieldset</frontend_model>
 				<field
 					id='enable'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='1'
 					translate='label'
 					type='Df\Framework\Form\Element\Checkbox'
-					sortOrder='1'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
 				>
 					<label>Enable?</label>
 					<backend_model>Df\Config\Backend\Checkbox</backend_model>
@@ -38,12 +34,10 @@
 				</field>
 				<field
 					id='url'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='2'
 					translate='label'
 					type='Df\Framework\Form\Element\Text'
-					sortOrder='2'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
 				>
 					<label>Blackbaud NetCommunity Root URL</label>
 					<comment><![CDATA[It should be like «https://site.com» or «https://site.com/path».]]></comment>
@@ -57,12 +51,10 @@
 				</field>
 				<field
 					id='privateKey'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='3'
 					translate='label'
 					type='obscure'
-					sortOrder='3'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
 				>
 					<label>Private Key</label>
 					<backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
@@ -71,14 +63,12 @@
 					<validate>required-entry</validate>
 				</field>
 				<field
+					dfRows='4'
 					id='regCompletionMessage'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='4'
 					translate='label'
 					type='Df\Framework\Form\Element\Textarea'
-					dfRows='4'
-					sortOrder='4'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
 				>
 					<label>A message for the Complete Registraction step</label>
 					<comment><![CDATA[
@@ -89,10 +79,8 @@ and then is redirected back to your Magento store to complete his registraction 
 				</field>
 				<group
 					id='button'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='5'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
 					translate='label'
 				>
 					<comment><![CDATA[The authentication button (or link) setttings.]]></comment>
@@ -100,21 +88,17 @@ and then is redirected back to your Magento store to complete his registraction 
 					<label>Button</label>
 					<group
 						id='header'
-						translate='label'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='1'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
 					>
 						<label>Header</label>
 						<field
 							id='enable'
+							showInDefault='1' showInStore='1' showInWebsite='1'
+							sortOrder='1'
 							translate='label'
 							type='Df\Framework\Form\Element\Checkbox'
-							sortOrder='1'
-							showInDefault='1'
-							showInWebsite='1'
-							showInStore='1'
 						>
 							<label>Enable?</label>
 							<backend_model>Df\Config\Backend\Checkbox</backend_model>
@@ -122,12 +106,10 @@ and then is redirected back to your Magento store to complete his registraction 
 						</field>
 						<field
 							id='type'
+							showInDefault='1' showInStore='1' showInWebsite='1'
+							sortOrder='2'
 							translate='label'
 							type='select'
-							sortOrder='2'
-							showInDefault='1'
-							showInWebsite='1'
-							showInStore='1'
 						>
 							<label>Type</label>
 							<source_model>Df\Sso\Source\Button\Type\UL</source_model>
@@ -139,12 +121,10 @@ and then is redirected back to your Magento store to complete his registraction 
 						</field>
 						<field
 							id='label'
+							showInDefault='1' showInStore='1' showInWebsite='1'
+							sortOrder='3'
 							translate='label'
 							type='text'
-							sortOrder='3'
-							showInDefault='1'
-							showInWebsite='1'
-							showInStore='1'
 						>
 							<label>Label</label>
 							<depends><field id='enable'>1</field></depends>
@@ -153,21 +133,17 @@ and then is redirected back to your Magento store to complete his registraction 
 					</group>
 					<group
 						id='loginPage'
-						translate='label'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='2'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
 					>
 						<label>Login Page</label>
 						<field
 							id='enable'
+							showInDefault='1' showInStore='1' showInWebsite='1'
+							sortOrder='1'
 							translate='label'
 							type='Df\Framework\Form\Element\Checkbox'
-							sortOrder='1'
-							showInDefault='1'
-							showInWebsite='1'
-							showInStore='1'
 						>
 							<label>Enable?</label>
 							<backend_model>Df\Config\Backend\Checkbox</backend_model>
@@ -175,12 +151,10 @@ and then is redirected back to your Magento store to complete his registraction 
 						</field>
 						<field
 							id='type'
+							showInDefault='1' showInStore='1' showInWebsite='1'
+							sortOrder='2'
 							translate='label'
 							type='select'
-							sortOrder='2'
-							showInDefault='1'
-							showInWebsite='1'
-							showInStore='1'
 						>
 							<label>Type</label>
 							<source_model>Df\Sso\Source\Button\Type\UL</source_model>
@@ -192,12 +166,10 @@ and then is redirected back to your Magento store to complete his registraction 
 						</field>
 						<field
 							id='label'
+							showInDefault='1' showInStore='1' showInWebsite='1'
+							sortOrder='3'
 							translate='label'
 							type='text'
-							sortOrder='3'
-							showInDefault='1'
-							showInWebsite='1'
-							showInStore='1'
 						>
 							<label>Label</label>
 							<depends><field id='enable'>1</field></depends>
@@ -206,21 +178,17 @@ and then is redirected back to your Magento store to complete his registraction 
 					</group>
 					<group
 						id='registratonPage'
-						translate='label'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='3'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
 					>
 						<label>Registration Page</label>
 						<field
 							id='enable'
+							showInDefault='1' showInStore='1' showInWebsite='1'
+							sortOrder='1'
 							translate='label'
 							type='Df\Framework\Form\Element\Checkbox'
-							sortOrder='1'
-							showInDefault='1'
-							showInWebsite='1'
-							showInStore='1'
 						>
 							<label>Enable?</label>
 							<backend_model>Df\Config\Backend\Checkbox</backend_model>
@@ -228,12 +196,10 @@ and then is redirected back to your Magento store to complete his registraction 
 						</field>
 						<field
 							id='type'
+							showInDefault='1' showInStore='1' showInWebsite='1'
+							sortOrder='2'
 							translate='label'
 							type='select'
-							sortOrder='2'
-							showInDefault='1'
-							showInWebsite='1'
-							showInStore='1'
 						>
 							<label>Type</label>
 							<source_model>Df\Sso\Source\Button\Type\UL</source_model>
@@ -245,12 +211,10 @@ and then is redirected back to your Magento store to complete his registraction 
 						</field>
 						<field
 							id='label'
+							showInDefault='1' showInStore='1' showInWebsite='1'
+							sortOrder='3'
 							translate='label'
 							type='text'
-							sortOrder='3'
-							showInDefault='1'
-							showInWebsite='1'
-							showInStore='1'
 						>
 							<label>Label</label>
 							<depends><field id='enable'>1</field></depends>
