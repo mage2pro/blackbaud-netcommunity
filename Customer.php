@@ -45,7 +45,7 @@ class Customer extends \Df\Sso\Customer {
 			'The response from the Blackbaud NetCommunity server is invalid,'
 			." because the «{$key}» parameter is absent in it."
 			."\nThe full response is:\n"
-			. df_json_encode_pretty($a)
+			. df_json_encode($a)
 		);
 	}
 }
