@@ -1,6 +1,6 @@
 {
 	"name": "mage2pro/blackbaud-netcommunity"
-	,"version": "1.0.7"
+	,"version": "1.0.8"
 	,"description": "The «Blackbaud NetCommunity» extension for Magento 2."
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro/c/extensions/blackbaud-netcommunity"
@@ -11,7 +11,7 @@
 		"homepage": "https://mage2.pro/users/dmitry_fedyuk",
 		"role": "Developer"
 	}]
-	,"require": {"mage2pro/core": ">=2.7.40"}
+	,"require": {"mage2pro/core": ">=2.8.17"}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"Dfe\\BlackbaudNetCommunity\\": ""}}
 	,"keywords": [
 		"Authentication"
