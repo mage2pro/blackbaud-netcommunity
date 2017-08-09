@@ -2,7 +2,7 @@
 namespace Dfe\BlackbaudNetCommunity\Setup;
 // 2016-12-02
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
-final class UpgradeSchema extends \Df\Sso\Upgrade\Schema {
+class UpgradeSchema extends \Df\Sso\Upgrade\Schema {
 	/**
 	 * 2016-12-02
 	 * @override
