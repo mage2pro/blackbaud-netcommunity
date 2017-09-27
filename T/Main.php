@@ -7,5 +7,5 @@ final class Main extends \Df\Core\TestCase {
 	function t00() {}
 
 	/** * @test 2016-11-19 */
-	function t01() {echo $this->s()->privateKey();}
+	function t01() {print_r($this->s()->privateKey());}
 }
