@@ -4,7 +4,7 @@
 	xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd"
 >
 	<router id='standard'>
-		<route id='Dfe_BlackbaudNetCommunity' frontName='dfe-bbnc'>
+		<route frontName='dfe-bbnc' id='Dfe_BlackbaudNetCommunity'>
 			<module name='Dfe_BlackbaudNetCommunity'/>
 		</route>
 	</router>
