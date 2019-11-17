@@ -16,21 +16,17 @@ class Url implements \Df\Framework\IValidator {
 	 * @return true|Phrase|Phrase[]
 	 */
 	function check(AE $e) {
-		/** @var true|Phrase|Phrase[] $result */
-		$result = true;
-		/** @var string|null $root */
-		if ($root = df_trim_ds_right($e['value'])) {
-			// 2017-04-14
-			// Any working website can be used here for the validation.
+		$r = true; /** @var true|Phrase|Phrase[] $r */
+		if ($root = df_trim_ds_right($e['value'])) { /** @var string|null $root */
+			// 2017-04-14 Any working website can be used here for the validation.
 			try {
 				$redirect = 'https://mage2.pro'; /** @var string $redirect */
 				$url = self::build($root, $redirect, false); /** @var string $url */
-				/** @var \Zend_Http_Response $r */
-				$r = df_zf_http($url, ['maxredirects' => 0])->request();
+				$res = df_zf_http($url, ['maxredirects' => 0])->request(); /** @var \Zend_Http_Response $res */
 				// 2016-11-20
 				// Blackbaud NetCommunity при перенаправлении добавляет в конце «/».
-				if (!$r->isRedirect() || $redirect !== df_trim_ds_right($r->getHeader('Location'))) {
-					$result = __(
+				if (!$res->isRedirect() || $redirect !== df_trim_ds_right($res->getHeader('Location'))) {
+					$r = __(
 						"The verification is failed."
 						." The Blackbaud NetCommunity webserver should redirect"
 						." the «%1» request to «%2», but it does not.", $url, $redirect
@@ -38,10 +34,10 @@ class Url implements \Df\Framework\IValidator {
 				}
 			}
 			catch (\Zend_Http_Exception $ex) {
-				$result = __("Verification failed. Internal message: «%1».", $ex->getMessage());
+				$r = __("Verification failed. Internal message: «%1».", $ex->getMessage());
 			}
 		}
-		return $result;
+		return $r;
 	}
 
 	/**
