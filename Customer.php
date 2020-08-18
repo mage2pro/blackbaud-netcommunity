@@ -2,7 +2,7 @@
 // 2016-12-02
 namespace Dfe\BlackbaudNetCommunity;
 use Dfe\BlackbaudNetCommunity\Settings as S;
-class Customer extends \Df\Sso\Customer {
+final class Customer extends \Df\Sso\Customer {
 	/**
 	 * 2016-12-02
 	 * «The BBIS user ID of the current logged in user.»
