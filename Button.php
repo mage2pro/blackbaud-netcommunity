@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\BlackbaudNetCommunity;
-// 2016-11-20
+# 2016-11-20
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Button extends \Df\Sso\Button {
 	/**

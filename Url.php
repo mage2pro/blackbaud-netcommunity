@@ -1,5 +1,5 @@
 <?php
-// 2016-11-20
+# 2016-11-20
 namespace Dfe\BlackbaudNetCommunity;
 use Df\Sso\CustomerReturn;
 use Dfe\BlackbaudNetCommunity\Settings as S;
@@ -18,13 +18,13 @@ class Url implements \Df\Framework\IValidator {
 	function check(AE $e) {
 		$r = true; /** @var true|Phrase|Phrase[] $r */
 		if ($root = df_trim_ds_right($e['value'])) { /** @var string|null $root */
-			// 2017-04-14 Any working website can be used here for the validation.
+			# 2017-04-14 Any working website can be used here for the validation.
 			try {
 				$redirect = 'https://mage2.pro'; /** @var string $redirect */
 				$url = self::build($root, $redirect, false); /** @var string $url */
 				$res = df_zf_http($url, ['maxredirects' => 0])->request(); /** @var \Zend_Http_Response $res */
-				// 2016-11-20
-				// Blackbaud NetCommunity при перенаправлении добавляет в конце «/».
+				# 2016-11-20
+				# Blackbaud NetCommunity при перенаправлении добавляет в конце «/».
 				if (!$res->isRedirect() || $redirect !== df_trim_ds_right($res->getHeader('Location'))) {
 					$r = __(
 						"The verification is failed."

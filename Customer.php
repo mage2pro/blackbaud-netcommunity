@@ -1,5 +1,5 @@
 <?php
-// 2016-12-02
+# 2016-12-02
 namespace Dfe\BlackbaudNetCommunity;
 use Dfe\BlackbaudNetCommunity\Settings as S;
 final class Customer extends \Df\Sso\Customer {
