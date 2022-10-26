@@ -42,7 +42,7 @@ class Url implements \Df\Framework\IValidator {
 
 	/**
 	 * 2016-11-20
-	 * @used-by check()
+	 * @used-by \Dfe\BlackbaudNetCommunity\Button::lHref()
 	 * @return string
 	 */
 	static function get() {return self::build(S::s()->url(), df_url_frontend(df_route(__CLASS__), [
@@ -52,8 +52,8 @@ class Url implements \Df\Framework\IValidator {
 
 	/**
 	 * 2016-11-20
-	 * @used-by check()
-	 * @used-by get()
+	 * @used-by self::check()
+	 * @used-by self::get()
 	 * @param string $root
 	 * @param string $redirect
 	 * @param bool $requireLogin [optional]

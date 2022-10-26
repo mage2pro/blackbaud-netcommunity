@@ -8,7 +8,6 @@ class Button extends \Df\Sso\Button {
 	 * @override
 	 * @see \Df\Sso\Button::lHref()
 	 * @used-by \Df\Sso\Button::htmlL()
-	 * @return string
 	 */
-	final protected function lHref() {return Url::get();}
+	final protected function lHref():string {return Url::get();}
 }

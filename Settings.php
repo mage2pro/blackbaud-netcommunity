@@ -22,7 +22,6 @@ final class Settings extends \Df\Sso\Settings {
 	 * @override
 	 * @see \Df\Config\Settings::prefix()
 	 * @used-by \Df\Config\Settings::v()
-	 * @return string
 	 */
-	protected function prefix() {return 'df_sso/blackbaudNetCommunity';}
+	protected function prefix():string {return 'df_sso/blackbaudNetCommunity';}
 }
