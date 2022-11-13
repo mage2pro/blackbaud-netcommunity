@@ -17,7 +17,7 @@ class Url implements \Df\Framework\IValidator {
 	 */
 	function check(AE $e) {
 		$r = true; /** @var true|Phrase|Phrase[] $r */
-		if ($root = df_trim_ds_right($e['value'])) { /** @var string|null $root */
+		if ($root = df_trim_ds_right($e['value'])) { /** @var string $root */
 			# 2017-04-14 Any working website can be used here for the validation.
 			try {
 				$redirect = 'https://mage2.pro'; /** @var string $redirect */
