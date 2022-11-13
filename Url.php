@@ -60,8 +60,6 @@ class Url implements \Df\Framework\IValidator {
 	 * «Blackbaud NetCommunity 7.1 Single Sign-on Overview Guide» (2017-01-24) https://mage2.pro/t/3696
 	 */
 	private static function build(string $root, string $redirect, bool $requireLogin = true):string {return
-		df_trim_ds_right($root)
-		. "/components/GetUserID.ashx?redirect={$redirect}"
-		. (!$requireLogin ? '' : '&requireLogin=1')
+		df_trim_ds_right($root) . "/components/GetUserID.ashx?redirect={$redirect}" . (!$requireLogin ? '' : '&requireLogin=1')
 	;}
 }
