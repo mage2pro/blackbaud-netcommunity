@@ -8,16 +8,14 @@ class UpgradeSchema extends \Df\Sso\Upgrade\Schema {
 	 * @override
 	 * @see \Df\Framework\Upgrade::initial()
 	 * @used-by \Df\Framework\Upgrade::isInitial()
-	 * @return string
 	 */
-	final protected function initial() {return '0.8.5';}
+	final protected function initial():string {return '0.8.5';}
 
 	/**
 	 * 2016-12-02
 	 * @override
 	 * @used-by \Df\Sso\Upgrade\Schema::_process()
 	 * @see \Df\Sso\Upgrade\Schema::fId()
-	 * @return string
 	 */
-	final static function fId() {return 'df_bbnc__id';}
+	final static function fId():string {return 'df_bbnc__id';}
 }

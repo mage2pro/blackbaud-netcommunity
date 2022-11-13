@@ -20,7 +20,7 @@ final class Customer extends \Df\Sso\Customer {
 	 * @used-by \Df\Sso\CustomerReturn::c()
 	 * @throws \Exception
 	 */
-	function validate() {df_assert_eq($this->p('sig'), strtolower(md5(implode([
+	function validate():void {df_assert_eq($this->p('sig'), strtolower(md5(implode([
 		$this->id(), $this->p('ts'), S::s()->privateKey()
 	]))));}
 

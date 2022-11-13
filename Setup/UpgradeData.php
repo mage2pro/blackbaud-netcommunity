@@ -8,16 +8,14 @@ class UpgradeData extends \Df\Sso\Upgrade\Data {
 	 * @override
 	 * @see \Df\Framework\Upgrade::initial()
 	 * @used-by \Df\Framework\Upgrade::isInitial()
-	 * @return string
 	 */
-	final protected function initial() {return '0.8.5';}
+	final protected function initial():string {return '0.8.5';}
 	
 	/**
 	 * 2016-12-02
 	 * @override
 	 * @see \Df\Sso\Upgrade\Data::labelPrefix()
 	 * @used-by \Df\Sso\Upgrade\Data::attribute()
-	 * @return string
 	 */
-	final protected function labelPrefix() {return 'Blackbaud NetCommunity';}
+	final protected function labelPrefix():string {return 'Blackbaud NetCommunity';}
 }

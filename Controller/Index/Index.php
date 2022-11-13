@@ -9,7 +9,6 @@ class Index extends _P {
 	 * @override
 	 * @see _P::canRegister()
 	 * @used-by _P::mc()
-	 * @return bool
 	 */
-	final protected function canRegister() {return false;}
+	final protected function canRegister():bool {return false;}
 }
