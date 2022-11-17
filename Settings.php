@@ -14,6 +14,7 @@ final class Settings extends \Df\Sso\Settings {
 
 	/**
 	 * 2016-11-20
+	 * @used-by \Dfe\BlackbaudNetCommunity\Url::get()
 	 */
 	function url():string {return $this->v();}
 
