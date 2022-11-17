@@ -7,6 +7,8 @@ namespace Dfe\BlackbaudNetCommunity;
 final class Settings extends \Df\Sso\Settings {
 	/**
 	 * 2016-11-19
+	 * @used-by \Dfe\BlackbaudNetCommunity\Customer::validate()
+	 * @used-by \Dfe\BlackbaudNetCommunity\Test\Main::t01()
 	 */
 	function privateKey():string {return $this->p();}
 
