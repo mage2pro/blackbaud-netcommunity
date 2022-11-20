@@ -40,9 +40,8 @@ final class Url implements \Df\Framework\IValidator {
 	/**
 	 * 2016-11-20
 	 * @used-by \Dfe\BlackbaudNetCommunity\Button::lHref()
-	 * @return string
 	 */
-	static function get() {return self::build(S::s()->url(), df_url_frontend(df_route(__CLASS__), [
+	static function get():string {return self::build(S::s()->url(), df_url_frontend(df_route(__CLASS__), [
 		/** 2016-12-02 Это значение будет обратно декодировано в методе @see CustomerReturn::execute() */
 		CustomerReturn::REDIRECT_URL_KEY => base64_encode(df_current_url())
 	]));}
