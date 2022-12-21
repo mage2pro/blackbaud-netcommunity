@@ -4,8 +4,8 @@ namespace Dfe\BlackbaudNetCommunity\Test;
 /** @method \Dfe\BlackbaudNetCommunity\Settings s() */
 final class Main extends \Df\Core\TestCase {
 	/** 2016-11-19 */
-	function t00() {}
+	function t00():void {}
 
-	/** * @test 2016-11-19 */
-	function t01() {print_r($this->s()->privateKey());}
+	/** 2016-11-19 @test */
+	function t01():void {print_r($this->s()->privateKey());}
 }
