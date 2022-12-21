@@ -35,7 +35,7 @@ final class Customer extends \Df\Sso\Customer {
 	 */
 	private function p(string $key):string {
 		/** @var array(string => string|int) $a */
-		$a = dfc($this, function() {return df_request() ?: (!df_my_local() ? [] : df_test_file_lj($this, 'empty'));});
+		$a = dfc($this, function():array {return df_request() ?: (!df_my_local() ? [] : df_test_file_lj($this, 'empty'));});
 		return isset($a[$key]) ? $a[$key] : df_error(
 			'The response from the Blackbaud NetCommunity server is invalid,'
 			." because the «{$key}» parameter is absent in it."
