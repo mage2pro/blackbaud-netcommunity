@@ -39,8 +39,7 @@ final class Customer extends \Df\Sso\Customer {
 		return isset($a[$key]) ? $a[$key] : df_error(
 			'The response from the Blackbaud NetCommunity server is invalid,'
 			." because the «{$key}» parameter is absent in it."
-			."\nThe full response is:\n"
-			. df_json_encode($a)
+			."\nThe full response is:\n" . df_dump($a)
 		);
 	}
 }
